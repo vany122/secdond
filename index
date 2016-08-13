@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>a webpage</title>
+	<link rel="stylesheet" type="text/css" href="myStyle.css">
+</head>
+<body >
+	<div class="news_root">
+		<div class="news_header">Headliner</div>
+			<div id="scrollContainer">
+				<div id="scrollContent">
+				<a href="#" >中信证券</a>
+				<a href="#" >中国银行</a>
+				<a href="#" >中国电车</a>
+				<a href="#" >中国重工</a>
+				<a href="#" >苏宁云裳</a>
+				<a href="#" >aa</a>
+				<a href="#" >a</a>
+				<a href="#" >b</a>
+				<a href="#" >c</a>
+				<a href="#" >d</a>
+				<a href="#" >e</a>
+				<a href="#" >f</a>
+
+			</div>
+		</div>
+	</div>
+	<script  type="text/javascript">
+		var stopscroll = false;
+		var scrollContHeight = 95;
+		var scrollContWidth = 230;
+		var scrollSpeed = 60;
+
+		var scrollContainer = document.getElementById("scrollContainer");
+		var scrollContent = document.getElementById("scrollContent");
+
+		do{
+			scrollContainer.appendChild(scrollContent.cloneNode(true));
+		}while(scrollContainer.offsetHeight<scrollContHeight);
+
+		scrollContainer.style.width =scrollContWidth+"px";
+		scrollContainer.style.height=scrollContHeight+"px";
+		scrollContainer.noWrap = true;
+
+		scrollContainer.onmouseover = new Function("stopscroll= true");
+		scrollContainer.onmouseout = new Function("stopscroll= false");
+
+		function init(){
+			scrollContainer.scrollTop = 0;
+			setInterval("scrollUp()",scrollSpeed);kkl
+		}
+		init();
+		var currTop = 0;
+		function scrollUp(){
+			if(stopscroll==true){
+				return ;
+			}
+			currTop = scrollContainer.scrollTop;
+			scrollContainer.scrollTop +=1;
+			if(currTop ==scrollContainer.scrollTop){
+				scrollContainer.scrollTop = 0;
+				scrollContainer.scrollTop+=1;
+			}
+		}
+	</script>
+</body>
+</html>

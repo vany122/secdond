@@ -1,0 +1,42 @@
+body{
+	font-size: 12px;
+	font-family: 'Microsoft YaHei','微软雅黑','SimSun','宋体';
+	background: #FFFFFF;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+	color: #000000;
+}
+a{
+	color: #666666;
+	text-decoration: none;
+	display: block;
+	line-height: 1.5em;
+}
+a:hover{
+	color:#CC0000;
+	text-decoration: none;
+}
+div.news_root{
+	width: 255px;
+	height: 134px;
+	text-align: left;
+	margin: 100px auto;
+	background: url(img/pure_2.jpg);
+	background-repeat:no-repeat;
+	background-size: cover;
+}
+div.news_header{
+	width: 243px;
+	height: 16px;
+	vertical-align: top;
+	text-align: left;
+	font-size: 14px;
+	padding: 6px;
+}
+#scrollContainer{
+	width: 245px;
+	margin: 2px 5px;
+	overflow: hidden;
+	text-align: left;
+}
